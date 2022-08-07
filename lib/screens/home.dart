@@ -1,8 +1,8 @@
 import 'package:app_crypto/screens/converter.dart';
 import 'package:app_crypto/screens/settings.dart';
 import 'package:app_crypto/screens/widgets/cards_holder.dart';
+import 'package:app_crypto/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -22,16 +22,12 @@ class Home extends StatelessWidget {
             pinned: true,
             actions: [
               IconButton(
-                icon: Icon(
-                  Icons.dehaze_rounded,
-                  color: Theme.of(context).cardColor,
-                ),
-                onPressed: () => showBarModalBottomSheet(
-                  context: context,
-                  backgroundColor: Colors.transparent,
-                  builder: (context) => const Settings(),
-                ),
-              )
+                  icon: Icon(
+                    Icons.dehaze_rounded,
+                    color: Theme.of(context).cardColor,
+                  ),
+                  onPressed: () =>
+                      Utils.showBottomRoute(context, (_) => const Settings()))
             ],
             expandedHeight: 460.0,
             flexibleSpace: FlexibleSpaceBar(
@@ -93,11 +89,8 @@ class Home extends StatelessWidget {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
                   child: InkWell(
-                    onTap: () => showBarModalBottomSheet(
-                      context: context,
-                      backgroundColor: Colors.transparent,
-                      builder: (context) => const Converter(),
-                    ),
+                    onTap: () => Utils.showBottomRoute(
+                        context, (_) => const Converter()),
                     child: Row(
                       children: [
                         Container(
