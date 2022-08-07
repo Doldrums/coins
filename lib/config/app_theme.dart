@@ -17,40 +17,70 @@ class AppTheme {
 
       /// main screen title
       headline1: GoogleFonts.mulish(
-          color: Colors.black, fontSize: 38, fontWeight: FontWeight.w900),
+        color: Colors.black,
+        fontSize: 38,
+        fontWeight: FontWeight.w900,
+      ),
 
       /// cards crypto title
       headline2: GoogleFonts.mulish(
-          color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700),
+        color: Colors.white,
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+      ),
 
       /// cards price title
       headline3: GoogleFonts.mulish(
-          color: Colors.white, fontSize: 22, fontWeight: FontWeight.w700),
+        color: Colors.white,
+        fontSize: 22,
+        fontWeight: FontWeight.w700,
+      ),
 
       /// list item title
       headline4: GoogleFonts.mulish(
-          color: Colors.black, fontSize: 14, fontWeight: FontWeight.w700),
+        color: Colors.black,
+        fontSize: 14,
+        fontWeight: FontWeight.w700,
+      ),
 
       /// list item sub-title
       headline5: GoogleFonts.mulish(
-          color: Colors.black45, fontSize: 12, fontWeight: FontWeight.w600),
+        color: Colors.black45,
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+      ),
 
       /// list item percent increased
       subtitle1: GoogleFonts.mulish(
-          color: Colors.greenAccent, fontSize: 12, fontWeight: FontWeight.w600),
+        color: Colors.greenAccent,
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+      ),
 
       /// list item percent decreased
       subtitle2: GoogleFonts.mulish(
-          color: Colors.redAccent, fontSize: 12, fontWeight: FontWeight.w600),
+        color: Colors.redAccent,
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+      ),
 
       button: GoogleFonts.mulish(
-          color: Colors.black, fontSize: 12, fontWeight: FontWeight.w700),
+        color: Colors.black,
+        fontSize: 12,
+        fontWeight: FontWeight.w700,
+      ),
 
       bodyText1: GoogleFonts.mulish(
-          color: Colors.black, fontSize: 28, fontWeight: FontWeight.w900),
+        color: Colors.black,
+        fontSize: 28,
+        fontWeight: FontWeight.w900,
+      ),
 
       bodyText2: GoogleFonts.mulish(
-          color: Colors.black45, fontSize: 20, fontWeight: FontWeight.w700),
+        color: Colors.black45,
+        fontSize: 20,
+        fontWeight: FontWeight.w700,
+      ),
     ),
     colorScheme: ColorScheme.light(
       primary: Colors.grey.shade200,
@@ -62,7 +92,7 @@ class AppTheme {
   static final ThemeData dark = ThemeData(
     primaryColor: Colors.blue,
     accentColor: Colors.blueAccent[100],
-    cardColor: Colors.grey[800]!,
+    cardColor: Colors.grey[800],
     visualDensity: VisualDensity.adaptivePlatformDensity,
     appBarTheme: const AppBarTheme(
       color: Colors.black,
@@ -78,37 +108,64 @@ class AppTheme {
 
       /// main screen title
       headline1: GoogleFonts.mulish(
-          color: Colors.white, fontSize: 44, fontWeight: FontWeight.w900),
+        color: Colors.white,
+        fontSize: 44,
+        fontWeight: FontWeight.w900,
+      ),
 
       /// cards crypto title
       headline2: GoogleFonts.mulish(
-          color: Colors.white54, fontSize: 16, fontWeight: FontWeight.w700),
+        color: Colors.white54,
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+      ),
 
       /// cards price title
       headline3: GoogleFonts.mulish(
-          color: Colors.white, fontSize: 22, fontWeight: FontWeight.w700),
+        color: Colors.white,
+        fontSize: 22,
+        fontWeight: FontWeight.w700,
+      ),
 
       /// list item title
       headline4: GoogleFonts.mulish(
-          color: Colors.white, fontSize: 14, fontWeight: FontWeight.w700),
+        color: Colors.white,
+        fontSize: 14,
+        fontWeight: FontWeight.w700,
+      ),
 
       /// list item sub-title
       headline5: GoogleFonts.mulish(
-          color: Colors.white54, fontSize: 12, fontWeight: FontWeight.w600),
+        color: Colors.white54,
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+      ),
 
       /// list item percent increased
       subtitle1: GoogleFonts.mulish(
-          color: Colors.greenAccent, fontSize: 12, fontWeight: FontWeight.w600),
+        color: Colors.greenAccent,
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+      ),
 
       /// list item percent decreased
       subtitle2: GoogleFonts.mulish(
-          color: Colors.redAccent, fontSize: 12, fontWeight: FontWeight.w600),
+        color: Colors.redAccent,
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+      ),
 
       bodyText1: GoogleFonts.mulish(
-          color: Colors.white, fontSize: 28, fontWeight: FontWeight.w900),
+        color: Colors.white,
+        fontSize: 28,
+        fontWeight: FontWeight.w900,
+      ),
 
-        bodyText2: GoogleFonts.mulish(
-            color: Colors.white54, fontSize: 20, fontWeight: FontWeight.w700),
+      bodyText2: GoogleFonts.mulish(
+        color: Colors.white54,
+        fontSize: 20,
+        fontWeight: FontWeight.w700,
+      ),
     ),
     colorScheme: const ColorScheme.dark(
       primary: Colors.white12,

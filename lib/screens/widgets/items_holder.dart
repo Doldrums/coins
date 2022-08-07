@@ -1,18 +1,16 @@
-import 'package:app_crypto/screens/converter.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/utils.dart';
+import '../converter.dart';
 
 class ItemsHolder extends StatelessWidget {
   const ItemsHolder({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return SliverFixedExtentList(
-      itemExtent: 60.0,
-      delegate: SliverChildBuilderDelegate(
-        (BuildContext context, int index) {
-          return Padding(
+  Widget build(BuildContext context) => SliverFixedExtentList(
+        itemExtent: 60.0,
+        delegate: SliverChildBuilderDelegate(
+          (BuildContext context, int index) => Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: InkWell(
               onTap: () =>
@@ -20,13 +18,14 @@ class ItemsHolder extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.blueAccent[100],
-                      ),
-                      child: const Icon(Icons.ac_unit_rounded)),
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.blueAccent[100],
+                    ),
+                    child: const Icon(Icons.ac_unit_rounded),
+                  ),
                   const SizedBox(
                     width: 10,
                   ),
@@ -58,9 +57,7 @@ class ItemsHolder extends StatelessWidget {
                 ],
               ),
             ),
-          );
-        },
-      ),
-    );
-  }
+          ),
+        ),
+      );
 }

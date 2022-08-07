@@ -4,11 +4,10 @@ class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Material(
-      child: SafeArea(
-        bottom: false,
-        child: SizedBox(
+  Widget build(BuildContext context) => Material(
+        child: SafeArea(
+          bottom: false,
+          child: SizedBox(
             height: 500,
             child: Padding(
               padding:
@@ -22,8 +21,8 @@ class Settings extends StatelessWidget {
                   ),
                 ],
               ),
-            )),
-      ),
-    );
-  }
+            ),
+          ),
+        ),
+      );
 }

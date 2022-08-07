@@ -12,14 +12,11 @@ class CardChartState extends State<CardChart> {
   bool showAvg = false;
 
   @override
-  Widget build(BuildContext context) {
-    return LineChart(
+  Widget build(BuildContext context) => LineChart(
       mainData(),
     );
-  }
 
-  LineChartData mainData() {
-    return LineChartData(
+  LineChartData mainData() => LineChartData(
       gridData: FlGridData(
         show: false,
       ),
@@ -67,5 +64,4 @@ class CardChartState extends State<CardChart> {
         ),
       ],
     );
-  }
 }

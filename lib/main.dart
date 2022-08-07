@@ -1,7 +1,7 @@
-import 'package:app_crypto/screens/home.dart';
 import 'package:flutter/material.dart';
 
 import 'config/app_theme.dart';
+import 'screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
   final themeMode = ThemeMode.light;
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
         title: 'Flutter Demo',
         home: const Home(),
         routes: <String, WidgetBuilder>{
@@ -22,6 +21,6 @@ class MyApp extends StatelessWidget {
         },
         themeMode: themeMode,
         theme: AppTheme.light,
-        darkTheme: AppTheme.dark);
-  }
+        darkTheme: AppTheme.dark,
+      );
 }

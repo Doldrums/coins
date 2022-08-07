@@ -7,13 +7,11 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 /// - [FixedExtentScrollController]
 FixedExtentScrollController useFixedExtentScrollController({
   List<Object?>? keys,
-}) {
-  return use(
+}) => use(
     _FixedExtentScrollControllerHook(
       keys: keys,
     ),
   );
-}
 
 class _FixedExtentScrollControllerHook
     extends Hook<FixedExtentScrollController> {
