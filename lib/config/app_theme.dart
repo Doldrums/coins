@@ -78,7 +78,7 @@ class AppTheme {
 
       bodyText2: GoogleFonts.mulish(
         color: Colors.black45,
-        fontSize: 20,
+        fontSize: 16,
         fontWeight: FontWeight.w700,
       ),
     ),
@@ -163,7 +163,7 @@ class AppTheme {
 
       bodyText2: GoogleFonts.mulish(
         color: Colors.white54,
-        fontSize: 20,
+        fontSize: 15,
         fontWeight: FontWeight.w700,
       ),
     ),
