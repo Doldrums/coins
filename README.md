@@ -1,3 +1,5 @@
+[![Hits-of-Code](https://hitsofcode.com/github/Doldrums/app_crypto)](https://hitsofcode.com/github/Doldrums/app_crypto/view)
+[![flutter](https://img.shields.io/badge/awesome-flutter-blue)](https://img.shields.io/badge/awesome-flutter-blue)
 # app_crypto
 
 A new Flutter project.
