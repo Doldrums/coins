@@ -1,1 +1,1 @@
-export 'crypto_currency.dart';
+export 'coin.dart';
