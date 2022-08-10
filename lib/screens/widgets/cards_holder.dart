@@ -1,6 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
+import '../../features/coins/models/models.dart';
 import '../../utils/fixed_extent_hook.dart';
 import 'card.dart';
 import 'progress_dot.dart';
@@ -8,10 +10,10 @@ import 'progress_dot.dart';
 class CardsHolder extends HookWidget {
   const CardsHolder({
     Key? key,
-    required this.itemCount,
+    required this.detailedCoins,
   }) : super(key: key);
 
-  final int itemCount;
+  final List<Coin> detailedCoins;
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +37,8 @@ class CardsHolder extends HookWidget {
                 builder: (context, index) => RotatedBox(
                   quarterTurns: 1,
                   child: CurrencyCard(
+                    // TODO:
+                    coin: detailedCoins[index.abs()],
                     selected: selectedIndex.value == index,
                   ),
                 ),
@@ -45,7 +49,7 @@ class CardsHolder extends HookWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(
-            itemCount,
+            5,
             (index) => ProgressDot(
               index: index,
               selectedIndex: selectedIndex.value,

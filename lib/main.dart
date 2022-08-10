@@ -1,26 +1,20 @@
+import 'package:crypto_currency_repository/crypto_currency_repository.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
 
-import 'config/app_theme.dart';
-import 'screens/home.dart';
+import 'app.dart';
+import 'bloc_observer.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Bloc.observer = AppBlocObserver();
+  HydratedBloc.storage = await HydratedStorage.build(
+    storageDirectory: kIsWeb
+        ? HydratedStorage.webStorageDirectory
+        : await getTemporaryDirectory(),
+  );
+  runApp(CryptoApp(cryptoCurrencyRepository: CryptoCurrencyRepository()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  final themeMode = ThemeMode.light;
-
-  @override
-  Widget build(BuildContext context) => MaterialApp(
-        title: 'Flutter Demo',
-        home: const Home(),
-        routes: <String, WidgetBuilder>{
-          '/home': (BuildContext context) => const Home(),
-        },
-        themeMode: themeMode,
-        theme: AppTheme.light,
-        darkTheme: AppTheme.dark,
-      );
-}

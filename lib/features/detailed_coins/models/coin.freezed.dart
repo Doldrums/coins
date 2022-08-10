@@ -14,35 +14,37 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Coin _$CoinFromJson(Map<String, dynamic> json) {
-  return _Coin.fromJson(json);
+DetailedCoin _$DetailedCoinFromJson(Map<String, dynamic> json) {
+  return _DetailedCoin.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Coin {
+mixin _$DetailedCoin {
   String get id => throw _privateConstructorUsedError;
   String get symbol => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CoinCopyWith<Coin> get copyWith => throw _privateConstructorUsedError;
+  $DetailedCoinCopyWith<DetailedCoin> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CoinCopyWith<$Res> {
-  factory $CoinCopyWith(Coin value, $Res Function(Coin) then) =
-      _$CoinCopyWithImpl<$Res>;
+abstract class $DetailedCoinCopyWith<$Res> {
+  factory $DetailedCoinCopyWith(
+          DetailedCoin value, $Res Function(DetailedCoin) then) =
+      _$DetailedCoinCopyWithImpl<$Res>;
   $Res call({String id, String symbol, String name});
 }
 
 /// @nodoc
-class _$CoinCopyWithImpl<$Res> implements $CoinCopyWith<$Res> {
-  _$CoinCopyWithImpl(this._value, this._then);
+class _$DetailedCoinCopyWithImpl<$Res> implements $DetailedCoinCopyWith<$Res> {
+  _$DetailedCoinCopyWithImpl(this._value, this._then);
 
-  final Coin _value;
+  final DetailedCoin _value;
   // ignore: unused_field
-  final $Res Function(Coin) _then;
+  final $Res Function(DetailedCoin) _then;
 
   @override
   $Res call({
@@ -68,21 +70,25 @@ class _$CoinCopyWithImpl<$Res> implements $CoinCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_CoinCopyWith<$Res> implements $CoinCopyWith<$Res> {
-  factory _$$_CoinCopyWith(_$_Coin value, $Res Function(_$_Coin) then) =
-      __$$_CoinCopyWithImpl<$Res>;
+abstract class _$$_DetailedCoinCopyWith<$Res>
+    implements $DetailedCoinCopyWith<$Res> {
+  factory _$$_DetailedCoinCopyWith(
+          _$_DetailedCoin value, $Res Function(_$_DetailedCoin) then) =
+      __$$_DetailedCoinCopyWithImpl<$Res>;
   @override
   $Res call({String id, String symbol, String name});
 }
 
 /// @nodoc
-class __$$_CoinCopyWithImpl<$Res> extends _$CoinCopyWithImpl<$Res>
-    implements _$$_CoinCopyWith<$Res> {
-  __$$_CoinCopyWithImpl(_$_Coin _value, $Res Function(_$_Coin) _then)
-      : super(_value, (v) => _then(v as _$_Coin));
+class __$$_DetailedCoinCopyWithImpl<$Res>
+    extends _$DetailedCoinCopyWithImpl<$Res>
+    implements _$$_DetailedCoinCopyWith<$Res> {
+  __$$_DetailedCoinCopyWithImpl(
+      _$_DetailedCoin _value, $Res Function(_$_DetailedCoin) _then)
+      : super(_value, (v) => _then(v as _$_DetailedCoin));
 
   @override
-  _$_Coin get _value => super._value as _$_Coin;
+  _$_DetailedCoin get _value => super._value as _$_DetailedCoin;
 
   @override
   $Res call({
@@ -90,7 +96,7 @@ class __$$_CoinCopyWithImpl<$Res> extends _$CoinCopyWithImpl<$Res>
     Object? symbol = freezed,
     Object? name = freezed,
   }) {
-    return _then(_$_Coin(
+    return _then(_$_DetailedCoin(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -109,10 +115,12 @@ class __$$_CoinCopyWithImpl<$Res> extends _$CoinCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Coin implements _Coin {
-  const _$_Coin({required this.id, required this.symbol, required this.name});
+class _$_DetailedCoin implements _DetailedCoin {
+  const _$_DetailedCoin(
+      {required this.id, required this.symbol, required this.name});
 
-  factory _$_Coin.fromJson(Map<String, dynamic> json) => _$$_CoinFromJson(json);
+  factory _$_DetailedCoin.fromJson(Map<String, dynamic> json) =>
+      _$$_DetailedCoinFromJson(json);
 
   @override
   final String id;
@@ -123,14 +131,14 @@ class _$_Coin implements _Coin {
 
   @override
   String toString() {
-    return 'Coin(id: $id, symbol: $symbol, name: $name)';
+    return 'DetailedCoin(id: $id, symbol: $symbol, name: $name)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Coin &&
+            other is _$_DetailedCoin &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.symbol, symbol) &&
             const DeepCollectionEquality().equals(other.name, name));
@@ -146,24 +154,25 @@ class _$_Coin implements _Coin {
 
   @JsonKey(ignore: true)
   @override
-  _$$_CoinCopyWith<_$_Coin> get copyWith =>
-      __$$_CoinCopyWithImpl<_$_Coin>(this, _$identity);
+  _$$_DetailedCoinCopyWith<_$_DetailedCoin> get copyWith =>
+      __$$_DetailedCoinCopyWithImpl<_$_DetailedCoin>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoinToJson(
+    return _$$_DetailedCoinToJson(
       this,
     );
   }
 }
 
-abstract class _Coin implements Coin {
-  const factory _Coin(
+abstract class _DetailedCoin implements DetailedCoin {
+  const factory _DetailedCoin(
       {required final String id,
       required final String symbol,
-      required final String name}) = _$_Coin;
+      required final String name}) = _$_DetailedCoin;
 
-  factory _Coin.fromJson(Map<String, dynamic> json) = _$_Coin.fromJson;
+  factory _DetailedCoin.fromJson(Map<String, dynamic> json) =
+      _$_DetailedCoin.fromJson;
 
   @override
   String get id;
@@ -173,5 +182,6 @@ abstract class _Coin implements Coin {
   String get name;
   @override
   @JsonKey(ignore: true)
-  _$$_CoinCopyWith<_$_Coin> get copyWith => throw _privateConstructorUsedError;
+  _$$_DetailedCoinCopyWith<_$_DetailedCoin> get copyWith =>
+      throw _privateConstructorUsedError;
 }
