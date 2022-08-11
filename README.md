@@ -1,3 +1,7 @@
+# Crypto-Coins App
+Example Flutter Application with Bloc & Freezed + Dio & Retrofit for API REST. Specifically for Antoine challenge :)
+
+
 <p align="center"><img src="https://github.com/Doldrums/app_crypto/blob/master/images/general.png?raw=true" alt="General image"></p>
 
 <p align="center">
@@ -9,19 +13,8 @@
   </a>
 </p>
 
-# app_crypto
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Test Coverage
+- Unit Testing (flutter_test)
+- Integration Testing (integration_test)
+- Mock Data (http_mock_adapter)
+- Github Actions (iOS & Android Integration Test)
