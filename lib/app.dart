@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'config/app_theme.dart';
 import 'features/theme/cubit/theme_cubit.dart';
-import 'home.dart';
+import 'features/coins/home.dart';
 
 class CryptoApp extends StatelessWidget {
   const CryptoApp(
