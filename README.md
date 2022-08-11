@@ -1,5 +1,14 @@
-[![Hits-of-Code](https://hitsofcode.com/github/Doldrums/app_crypto)](https://hitsofcode.com/github/Doldrums/app_crypto/view)
-[![flutter](https://img.shields.io/badge/awesome-flutter-blue)](https://img.shields.io/badge/awesome-flutter-blue)
+<p align="center"><img src="https://github.com/Doldrums/app_crypto/blob/master/images/general.png?raw=true" alt="General image"></p>
+
+<p align="center">
+   <a href="https://twitter.com/flutterfiredev">
+    <img src="https://img.shields.io/badge/awesome-Flutter-1da1f2.svg?style=plastic" alt="Awesome Flutter" />
+  </a>
+  <a href="https://github.com/felangel/bloc">
+    <img src="https://img.shields.io/badge/maintained%20with-Bloc-f700ff.svg?style=plastic" alt="Maintained with Bloc" />
+  </a>
+</p>
+
 # app_crypto
 
 A new Flutter project.
