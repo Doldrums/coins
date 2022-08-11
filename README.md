@@ -18,3 +18,7 @@ Example Flutter Application with Bloc & Freezed + Dio & Retrofit for API REST. S
 - Integration Testing (integration_test)
 - Mock Data (http_mock_adapter)
 - Github Actions (iOS & Android Integration Test)
+
+## More Screenshots
+
+<p align="center"><img src="https://github.com/Doldrums/app_crypto/blob/master/images/screens.png?raw=true" alt="General image"></p>
