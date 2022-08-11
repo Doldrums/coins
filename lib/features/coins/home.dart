@@ -2,22 +2,18 @@ import 'package:crypto_currency_repository/crypto_currency_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'features/coins/bloc/coin_bloc.dart';
-import 'features/coins/widgets/coin_tile.dart';
-import 'features/detailed_coins/cubit/crypto_currency_cubit.dart';
-import 'screens/settings.dart';
-import 'screens/widgets/cards_holder.dart';
-import 'utils/utils.dart';
+import '../../config/constants.dart';
+import 'bloc/coin_bloc.dart';
+import 'widgets/coin_tile.dart';
+import '../../utils/utils.dart';
+import '../theme/settings.dart';
+import 'widgets/cards_holder.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => BlocProvider(
-        create: (context) =>
-            CoinDetailedCubit(context.read<CryptoCurrencyRepository>()),
-        child: const HomeView(),
-      );
+  Widget build(BuildContext context) => const HomeView();
 }
 
 class HomeView extends StatelessWidget {
@@ -32,7 +28,7 @@ class HomeView extends StatelessWidget {
         builder: (context, state) {
           switch (state.status) {
             case CoinStatus.failure:
-              return const Center(child: Text('failed to fetch coins'));
+              return const Center(child: Text('Failed to fetch coins'));
             case CoinStatus.success:
               return Scaffold(
                 body: CustomScrollView(
@@ -44,7 +40,7 @@ class HomeView extends StatelessWidget {
                         IconButton(
                           icon: Icon(
                             Icons.dehaze_rounded,
-                            color: Theme.of(context).cardColor,
+                            color: Theme.of(context).iconTheme.color,
                           ),
                           onPressed: () => Utils.showBottomRoute(
                             context,
@@ -91,13 +87,9 @@ class HomeView extends StatelessWidget {
                                 CardsHolder(
                                   detailedCoins: state.coins
                                       .where(
-                                        (element) => {
-                                          'ethereum',
-                                          'bitcoin',
-                                          'tether',
-                                          'usdc',
-                                          'BNB'
-                                        }.contains(element.id),
+                                        (element) =>
+                                            Constants.detailedCoinsIds()
+                                                .contains(element.id),
                                       )
                                       .toList(),
                                 ),
@@ -136,13 +128,8 @@ class HomeView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SliverToBoxAdapter(
-                      child: SizedBox(
-                        height: 20,
-                      ),
-                    ),
                     SliverFixedExtentList(
-                      itemExtent: 50.0,
+                      itemExtent: 60.0,
                       delegate: SliverChildBuilderDelegate(
                         (BuildContext context, int index) =>
                             CoinTile(coin: state.coins[index]),

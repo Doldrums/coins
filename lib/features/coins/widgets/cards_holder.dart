@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-import '../../features/coins/models/models.dart';
-import '../../utils/fixed_extent_hook.dart';
-import 'card.dart';
+import '../models/models.dart';
+import 'detailed_card.dart';
+import '../../../utils/utils.dart';
 import 'progress_dot.dart';
 
 class CardsHolder extends HookWidget {

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../../features/coins/models/models.dart';
-import 'card_chart.dart';
+import 'detailed_card_chart.dart';
+import '../../../utils/utils.dart';
+import '../models/models.dart';
 
-class CoinDetailedCard extends StatelessWidget {
+class CurrencyCard extends StatelessWidget {
   final bool selected;
   final Coin coin;
 
-  const CoinDetailedCard({Key? key, required this.selected, required this.coin})
+  const CurrencyCard({Key? key, required this.selected, required this.coin})
       : super(key: key);
 
   @override
@@ -49,7 +50,7 @@ class CoinDetailedCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
-                '${coin.currentPrice} ${coin.symbol}',
+                '${Utils.prettyNumber(coin.currentPrice)} ${coin.symbol}',
                 style: Theme.of(context).textTheme.headline3,
               ),
             ),
@@ -71,7 +72,7 @@ class CoinDetailedCard extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              '\$${coin.currentPrice}',
+                              '\$${Utils.prettyNumber(coin.currentPrice)}',
                               style: Theme.of(context).textTheme.headline2,
                             ),
                             const Spacer(),
