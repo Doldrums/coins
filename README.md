@@ -13,7 +13,28 @@ Example Flutter Application with Bloc & Freezed + Dio & Retrofit for API REST. S
   </a>
 </p>
 
+## Setup 
+```
+➜  folder ✗ git clone https://github.com/Doldrums/app_crypto.git
+➜  app_crypto git:(master) ✗ flutter pub get
+➜  app_crypto git:(master) ✗ cd packages/coingecko_api && flutter pub get
+➜  app_crypto git:(master) ✗ cd packages/crypto_currency_repository && flutter pub get
+
+# in case there are conflicts in generatet files
+➜  app_crypto git:(master) ✗ flutter pub run build_runner build --delete-conflicting-outputs
+➜  app_crypto git:(master) ✗ flutter pub run easy_localization:generate --source-dir ./assets/translations -f keys -o locale_keys.g.dart
+
+
+➜  app_crypto git:(master) ✗ flutter run
+```
 ## Test Coverage
+```
+➜  app_crypto git:(master) ✗ flutter test                   
+00:02 +12: All tests passed! 
+
+➜  coingecko_api git:(master) ✗ flutter test                 
+00:02 +1: All tests passed!   
+```
 - Unit Testing (`flutter_test`)
 - Bloc Testing (`bloc_test`)
 - Using Mock Data (`mocktail`)
