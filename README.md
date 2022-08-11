@@ -32,8 +32,11 @@ Example Flutter Application with Bloc & Freezed + Dio & Retrofit for API REST. S
 ➜  app_crypto git:(master) ✗ flutter test                   
 00:02 +12: All tests passed! 
 
-➜  coingecko_api git:(master) ✗ flutter test                 
-00:02 +1: All tests passed!   
+➜  coingecko_api git:(master) ✗ flutter test    
+00:02 +4: All tests passed!   
+
+➜  crypto_currency_repository git:(master) ✗ flutter test                 
+00:02 +1: All tests passed!        
 ```
 - Unit Testing (`flutter_test`)
 - Bloc Testing (`bloc_test`)
