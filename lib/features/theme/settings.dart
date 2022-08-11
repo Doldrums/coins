@@ -184,7 +184,8 @@ class Settings extends StatelessWidget {
                                 const Spacer(),
                                 SettingsCard(
                                   title: LocaleKeys.settings_locale_title.tr(),
-                                  subtitle: 'English',
+                                  subtitle:
+                                      context.locale.languageCode.toUpperCase(),
                                   icon: const Icon(
                                     Icons.language,
                                   ),
@@ -192,7 +193,7 @@ class Settings extends StatelessWidget {
                                     await showConfirmationDialog<int>(
                                       style: AdaptiveStyle.material,
                                       context: context,
-                                      title: 'Locale settings ',
+                                      title: 'Locale settings',
                                       actions: [
                                         AlertDialogAction(
                                           textStyle: Theme.of(context)

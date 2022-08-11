@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../features/theme/widgets/theme_selector.dart';
+import '../generated/locale_keys.g.dart';
 
 class Constants {
   const Constants._();
@@ -8,15 +10,15 @@ class Constants {
   static List<ThemeSelectorItem> themeSelectorItems() => [
         ThemeSelectorItem(
           icon: const Icon(Icons.sunny),
-          title: 'Light Mode',
+          title: LocaleKeys.settings_theme_item1.tr(),
         ),
         ThemeSelectorItem(
           icon: const Icon(Icons.dark_mode),
-          title: 'Dark Mode',
+          title: LocaleKeys.settings_theme_item2.tr(),
         ),
         ThemeSelectorItem(
           icon: const Icon(Icons.settings_power_rounded),
-          title: 'System UI',
+          title: LocaleKeys.settings_theme_item2.tr(),
         ),
       ];
 
@@ -33,4 +35,6 @@ class Constants {
         'litecoin',
         'polkadot',
       ];
+
+  static String prettyFormat() => '#,##,000';
 }
