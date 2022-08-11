@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Entdecke\nSammlungen",
+    "section_title1": "Empfehlungen",
+    "section_title2": "Alle anzeigen"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "section_title1": "Farbthema",
+    "theme_item1": "Lichtmodus",
+    "theme_item2": "Dunkles Thema",
+    "theme_item3": "System-UI",
+    "section_title2": "App-Farbe",
+    "section_subtitle": "Editor öffnen",
+    "locale": {
+      "title": "Ort",
+      "item1": "English",
+      "item2": "Deutsch",
+      "item3": "Français",
+      "item4": "Русский"
+    },
+    "currency": {
+      "title": "Währung",
+      "subtitle": "USD"
+    },
+    "about": {
+      "title": "Über",
+      "subtitle": "Info"
+    }
+  },
+  "converter": {
+    "title": "Konverter",
+    "subtitle": "je nach Wechselkurs.",
+    "section_title1": "Betrag",
+    "section_title2": "Konvertiert in"
+  }
+}

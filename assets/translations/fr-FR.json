@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Explorez\nles collections",
+    "section_title1": "Recommandations",
+    "section_title2": "Voir tout"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "section_title1": "Thème de couleur",
+    "theme_item1": "Mode Lumière",
+    "theme_item2": "Mode sombre",
+    "theme_item3": "UI système",
+    "section_title2": "Couleur de l'application",
+    "section_subtitle": "Ouvrir l'éditeur",
+    "locale": {
+      "title": "Local",
+      "item1": "English",
+      "item2": "Deutsch",
+      "item3": "Français",
+      "item4": "Русский"
+    },
+    "currency": {
+      "title": "Devise",
+      "subtitle": "USD"
+    },
+    "about": {
+      "title": "À propos",
+      "subtitle": "Info"
+    }
+  },
+  "converter": {
+    "title": "Convertisseur",
+    "subtitle": "selon le taux de change.",
+    "section_title1": "Montant",
+    "section_title2": "Converti en"
+  }
+}

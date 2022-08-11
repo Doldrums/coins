@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Explore\ncollections",
+    "section_title1": "Recommendations",
+    "section_title2": "View all"
+  },
+  "settings": {
+    "title": "Settings",
+    "section_title1": "Color Theme",
+    "theme_item1": "Light Mode",
+    "theme_item2": "Dark Theme",
+    "theme_item3": "System UI",
+    "section_title2": "App Color",
+    "section_subtitle": "Open editor",
+    "locale": {
+      "title": "Locale",
+      "item1": "English",
+      "item2": "Deutsch",
+      "item3": "Français",
+      "item4": "Русский"
+    },
+    "currency": {
+      "title": "Currency",
+      "subtitle": "USD"
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "Info"
+    }
+  },
+  "converter": {
+    "title": "Converter",
+    "subtitle": "according to the exchange rate.",
+    "section_title1": "Amount",
+    "section_title2": "Converted to"
+  }
+}

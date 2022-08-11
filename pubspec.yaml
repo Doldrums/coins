@@ -33,6 +33,9 @@ dependencies:
   mocktail: ^0.3.0
   bloc_concurrency: ^0.2.0
   intl: ^0.17.0
+  easy_localization: ^3.0.1
+  adaptive_dialog: ^1.8.0
+  tuple: ^2.0.0
 
 dev_dependencies:
   integration_test:
@@ -43,3 +46,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/translations/

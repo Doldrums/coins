@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Добро\nпожаловать",
+    "section_title1": "Рекомендации",
+    "section_title2": "Смотреть еще"
+  },
+  "settings": {
+    "title": "Настройки",
+    "section_title1": "Тема",
+    "theme_item1": "Светлая",
+    "theme_item2": "Темная",
+    "theme_item3": "Системная",
+    "section_title2": "Цветовая тема",
+    "section_subtitle": "Открыть редактор",
+    "locale": {
+      "title": "Язык",
+      "item1": "English",
+      "item2": "Deutsch",
+      "item3": "Français",
+      "item4": "Русский"
+    },
+    "currency": {
+      "title": "Валюта",
+      "subtitle": "USD"
+    },
+    "about": {
+      "title": "FAQ",
+      "subtitle": "Инфо"
+    }
+  },
+  "converter": {
+    "title": "Конвертация",
+    "subtitle": "согласно текущему курсу.",
+    "section_title1": "Сумма",
+    "section_title2": "Получится"
+  }
+}

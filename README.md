@@ -14,10 +14,10 @@ Example Flutter Application with Bloc & Freezed + Dio & Retrofit for API REST. S
 </p>
 
 ## Test Coverage
-- Unit Testing (flutter_test)
-- Integration Testing (integration_test)
-- Mock Data (http_mock_adapter)
-- Github Actions (iOS & Android Integration Test)
+- Unit Testing (`flutter_test`)
+- Bloc Testing (`bloc_test`)
+- Using Mock Data (`mocktail`)
+- Github Actions (iOS & Android Testing)
 
 ## More Screenshots
 

@@ -1,6 +1,10 @@
+import 'package:adaptive_dialog/adaptive_dialog.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../config/constants.dart';
+import '../../generated/locale_keys.g.dart';
+import 'widgets/settings_card.dart';
 import 'widgets/theme_selector_holder.dart';
 
 class Settings extends StatelessWidget {
@@ -26,7 +30,7 @@ class Settings extends StatelessWidget {
                     child: Row(
                       children: [
                         Text(
-                          'Settings',
+                          LocaleKeys.settings_title.tr(),
                           style: Theme.of(context).textTheme.bodyText1,
                         ),
                         const Spacer(),
@@ -48,7 +52,7 @@ class Settings extends StatelessWidget {
                       right: 24.0,
                     ),
                     child: Text(
-                      'Color Theme',
+                      LocaleKeys.settings_section_title1.tr(),
                       style: Theme.of(context).textTheme.headline4,
                     ),
                   ),
@@ -66,7 +70,7 @@ class Settings extends StatelessWidget {
                       right: 24.0,
                     ),
                     child: Text(
-                      'App Color',
+                      LocaleKeys.settings_section_title2.tr(),
                       style: Theme.of(context).textTheme.headline4,
                     ),
                   ),
@@ -138,7 +142,7 @@ class Settings extends StatelessWidget {
                         ),
                         const Spacer(),
                         Text(
-                          'Open editor',
+                          LocaleKeys.settings_section_subtitle.tr(),
                           style: Theme.of(context).textTheme.headline5,
                         ),
                         IconButton(
@@ -178,127 +182,106 @@ class Settings extends StatelessWidget {
                             Row(
                               children: [
                                 const Spacer(),
-                                Column(
-                                  children: [
-                                    Card(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .tertiary,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      elevation: 2.0,
-                                      child: const Padding(
-                                        padding: EdgeInsets.all(12.0),
-                                        child: Icon(
-                                          Icons.language,
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 8.0),
-                                      child: RichText(
-                                        overflow: TextOverflow.ellipsis,
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text: 'Locale\n',
-                                          style: Theme.of(context)
+                                SettingsCard(
+                                  title: LocaleKeys.settings_locale_title.tr(),
+                                  subtitle: 'English',
+                                  icon: const Icon(
+                                    Icons.language,
+                                  ),
+                                  onPressed: () async {
+                                    await showConfirmationDialog<int>(
+                                      style: AdaptiveStyle.material,
+                                      context: context,
+                                      title: 'Locale settings ',
+                                      actions: [
+                                        AlertDialogAction(
+                                          textStyle: Theme.of(context)
                                               .textTheme
-                                              .headline4,
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: 'English',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .headline5,
-                                            ),
-                                          ],
+                                              .headline4!,
+                                          label: LocaleKeys
+                                              .settings_locale_item1
+                                              .tr(),
+                                          key: 1,
                                         ),
-                                      ),
-                                    ),
-                                  ],
+                                        AlertDialogAction(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline4!,
+                                          label: LocaleKeys
+                                              .settings_locale_item2
+                                              .tr(),
+                                          key: 2,
+                                        ),
+                                        AlertDialogAction(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline4!,
+                                          label: LocaleKeys
+                                              .settings_locale_item3
+                                              .tr(),
+                                          key: 3,
+                                        ),
+                                        AlertDialogAction(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline4!,
+                                          label: LocaleKeys
+                                              .settings_locale_item4
+                                              .tr(),
+                                          key: 4,
+                                        ),
+                                      ],
+                                    ).then(
+                                      (value) {
+                                        switch (value) {
+                                          case 1:
+                                            return context.locale =
+                                                const Locale('en', 'US');
+                                          case 2:
+                                            return context.locale =
+                                                const Locale('de', 'DE');
+                                          case 3:
+                                            return context.locale =
+                                                const Locale('fr', 'FR');
+                                          case 4:
+                                            return context.locale =
+                                                const Locale('ru', 'RU');
+                                          default:
+                                            return context.locale =
+                                                const Locale('en', 'US');
+                                        }
+                                      },
+                                    );
+                                  },
                                 ),
                                 const Spacer(),
-                                Column(
-                                  children: [
-                                    Card(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .tertiary,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      elevation: 2.0,
-                                      child: const Padding(
-                                        padding: EdgeInsets.all(12.0),
-                                        child: Icon(
-                                          Icons.currency_exchange,
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 8.0),
-                                      child: RichText(
-                                        overflow: TextOverflow.ellipsis,
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text: 'Currency\n',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline4,
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: 'USDT',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .headline5,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                SettingsCard(
+                                  title:
+                                      LocaleKeys.settings_currency_title.tr(),
+                                  subtitle: LocaleKeys
+                                      .settings_currency_subtitle
+                                      .tr(),
+                                  icon: const Icon(
+                                    Icons.currency_exchange,
+                                  ),
+                                  onPressed: () async =>
+                                      await showOkAlertDialog(
+                                    context: context,
+                                    title: 'Oops!',
+                                    message:
+                                        'Presently we only support USD currency.',
+                                  ),
                                 ),
                                 const Spacer(),
-                                Column(
-                                  children: [
-                                    Card(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .tertiary,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      elevation: 2.0,
-                                      child: const Padding(
-                                        padding: EdgeInsets.all(12.0),
-                                        child: Icon(
-                                          Icons.abc_outlined,
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 8.0),
-                                      child: RichText(
-                                        overflow: TextOverflow.ellipsis,
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text: 'About\n',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline4,
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: 'info',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .headline5,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                SettingsCard(
+                                  title: LocaleKeys.settings_about_title.tr(),
+                                  subtitle:
+                                      LocaleKeys.settings_about_subtitle.tr(),
+                                  icon: const Icon(
+                                    Icons.abc_outlined,
+                                  ),
+                                  onPressed: () => context
+                                      .setLocale(const Locale('de', 'DE')),
                                 ),
                                 const Spacer(),
                               ],
