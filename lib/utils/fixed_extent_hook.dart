@@ -6,11 +6,12 @@ part of 'utils.dart';
 /// - [FixedExtentScrollController]
 FixedExtentScrollController useFixedExtentScrollController({
   List<Object?>? keys,
-}) => use(
-    _FixedExtentScrollControllerHook(
-      keys: keys,
-    ),
-  );
+}) =>
+    use(
+      _FixedExtentScrollControllerHook(
+        keys: keys,
+      ),
+    );
 
 class _FixedExtentScrollControllerHook
     extends Hook<FixedExtentScrollController> {

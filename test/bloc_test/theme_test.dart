@@ -3,7 +3,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'helpers/hydrated_bloc.dart';
+import '../helpers/hydrated_bloc.dart';
 
 void main() {
   initHydratedStorage();

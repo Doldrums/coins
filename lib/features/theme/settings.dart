@@ -181,7 +181,9 @@ class Settings extends StatelessWidget {
                                 Column(
                                   children: [
                                     Card(
-                                      color: Theme.of(context).colorScheme.tertiary,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .tertiary,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
                                       ),
@@ -200,12 +202,15 @@ class Settings extends StatelessWidget {
                                         textAlign: TextAlign.center,
                                         text: TextSpan(
                                           text: 'Locale\n',
-                                          style: Theme.of(context).textTheme.headline4,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .headline4,
                                           children: <TextSpan>[
                                             TextSpan(
-                                              text:
-                                              'English',
-                                              style: Theme.of(context).textTheme.headline5,
+                                              text: 'English',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5,
                                             ),
                                           ],
                                         ),
@@ -217,7 +222,9 @@ class Settings extends StatelessWidget {
                                 Column(
                                   children: [
                                     Card(
-                                      color: Theme.of(context).colorScheme.tertiary,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .tertiary,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
                                       ),
@@ -236,12 +243,15 @@ class Settings extends StatelessWidget {
                                         textAlign: TextAlign.center,
                                         text: TextSpan(
                                           text: 'Currency\n',
-                                          style: Theme.of(context).textTheme.headline4,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .headline4,
                                           children: <TextSpan>[
                                             TextSpan(
-                                              text:
-                                              'USDT',
-                                              style: Theme.of(context).textTheme.headline5,
+                                              text: 'USDT',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5,
                                             ),
                                           ],
                                         ),
@@ -253,7 +263,9 @@ class Settings extends StatelessWidget {
                                 Column(
                                   children: [
                                     Card(
-                                      color: Theme.of(context).colorScheme.tertiary,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .tertiary,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
                                       ),
@@ -272,12 +284,15 @@ class Settings extends StatelessWidget {
                                         textAlign: TextAlign.center,
                                         text: TextSpan(
                                           text: 'About\n',
-                                          style: Theme.of(context).textTheme.headline4,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .headline4,
                                           children: <TextSpan>[
                                             TextSpan(
-                                              text:
-                                              'info',
-                                              style: Theme.of(context).textTheme.headline5,
+                                              text: 'info',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5,
                                             ),
                                           ],
                                         ),

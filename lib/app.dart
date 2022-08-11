@@ -18,13 +18,13 @@ class CryptoApp extends StatelessWidget {
         value: _cryptoCurrencyRepository,
         child: BlocProvider(
           create: (_) => ThemeCubit(),
-          child: const WeatherAppView(),
+          child: const CoinAppView(),
         ),
       );
 }
 
-class WeatherAppView extends StatelessWidget {
-  const WeatherAppView({super.key});
+class CoinAppView extends StatelessWidget {
+  const CoinAppView({super.key});
 
   @override
   Widget build(BuildContext context) => BlocBuilder<ThemeCubit, ThemeMode>(

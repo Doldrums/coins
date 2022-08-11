@@ -17,4 +17,3 @@ void main() async {
   );
   runApp(CryptoApp(cryptoCurrencyRepository: CryptoCurrencyRepository()));
 }
-

@@ -8,8 +8,9 @@ import '../crypto_currency_repository.dart';
 class CryptoCurrencyFailure implements Exception {}
 
 class CryptoCurrencyRepository {
-  CryptoCurrencyRepository({CoinGeckoApiClient? weatherApiClient})
-      : _cryptoCurrencyApiClient = weatherApiClient ?? CoinGeckoApiClient(Dio());
+  CryptoCurrencyRepository({CoinGeckoApiClient? coingeckoApiClient})
+      : _cryptoCurrencyApiClient =
+            coingeckoApiClient ?? CoinGeckoApiClient(Dio());
 
   final CoinGeckoApiClient _cryptoCurrencyApiClient;
 

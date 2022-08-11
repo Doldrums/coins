@@ -20,7 +20,7 @@ class Utils {
 
   static String prettyNumber(num number) {
     var formatter = NumberFormat('#,##,000');
-    if(number > 1000) {
+    if (number > 1000) {
       return formatter.format(number);
     } else {
       return number.toStringAsFixed(2);

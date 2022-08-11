@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-
 part 'coin.freezed.dart';
 part 'coin.g.dart';
 
@@ -17,7 +16,5 @@ class Coin with _$Coin {
     required DateTime lastUpdated,
   }) = _Coin;
 
-  factory Coin.fromJson(Map<String, Object?> json)
-  => _$CoinFromJson(json);
-
+  factory Coin.fromJson(Map<String, Object?> json) => _$CoinFromJson(json);
 }

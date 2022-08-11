@@ -73,7 +73,7 @@ class ThemeSelector extends StatelessWidget {
         ),
         elevation: 2.0,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal:16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: navBarEssentials!.items!.map((item) {

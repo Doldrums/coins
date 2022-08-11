@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:app_crypto/features/coins/models/coin.dart';
 import 'package:bloc/bloc.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:crypto_currency_repository/crypto_currency_repository.dart'
@@ -8,8 +7,9 @@ import 'package:crypto_currency_repository/crypto_currency_repository.dart'
 import 'package:equatable/equatable.dart';
 import 'package:stream_transform/stream_transform.dart';
 
-part 'coin_event.dart';
+import '../models/coin.dart';
 
+part 'coin_event.dart';
 part 'coin_state.dart';
 
 const throttleDuration = Duration(milliseconds: 100);
@@ -33,7 +33,6 @@ class CoinBloc extends Bloc<CoinEvent, CoinState> {
     CoinsFetched event,
     Emitter<CoinState> emit,
   ) async {
-    if (state.hasReachedMax) return;
     try {
       if (state.status == CoinStatus.initial) {
         final coins = await _fetchCoins();
@@ -41,22 +40,17 @@ class CoinBloc extends Bloc<CoinEvent, CoinState> {
           state.copyWith(
             status: CoinStatus.success,
             coins: coins,
-            hasReachedMax: false,
           ),
         );
       }
       final coins = await _fetchCoins(state.coins.length);
-      coins.isEmpty
-          ? emit(state.copyWith(hasReachedMax: true))
-          : emit(
-              state.copyWith(
-                status: CoinStatus.success,
-                coins: List.of(state.coins)..addAll(coins),
-                hasReachedMax: false,
-              ),
-            );
+      emit(
+        state.copyWith(
+          status: CoinStatus.success,
+          coins: List.of(state.coins)..addAll(coins),
+        ),
+      );
     } catch (e) {
-      print(e.toString());
       emit(state.copyWith(status: CoinStatus.failure));
     }
   }

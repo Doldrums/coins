@@ -6,4 +6,3 @@ abstract class CoinEvent extends Equatable {
 }
 
 class CoinsFetched extends CoinEvent {}
-

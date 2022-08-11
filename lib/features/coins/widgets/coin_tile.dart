@@ -11,7 +11,8 @@ class CoinTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => InkWell(
-        onTap: () => Utils.showBottomRoute(context, (_) => Converter(coin: coin)),
+        onTap: () =>
+            Utils.showBottomRoute(context, (_) => Converter(coin: coin)),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(

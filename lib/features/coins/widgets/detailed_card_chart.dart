@@ -13,55 +13,55 @@ class CardChartState extends State<CardChart> {
 
   @override
   Widget build(BuildContext context) => LineChart(
-      mainData(),
-    );
+        mainData(),
+      );
 
   LineChartData mainData() => LineChartData(
-      gridData: FlGridData(
-        show: false,
-      ),
-      titlesData: FlTitlesData(
-        show: true,
-        rightTitles: AxisTitles(
-          sideTitles: SideTitles(showTitles: false),
+        gridData: FlGridData(
+          show: false,
         ),
-        topTitles: AxisTitles(
-          sideTitles: SideTitles(showTitles: false),
-        ),
-        bottomTitles: AxisTitles(
-          sideTitles: SideTitles(
-            showTitles: false,
+        titlesData: FlTitlesData(
+          show: true,
+          rightTitles: AxisTitles(
+            sideTitles: SideTitles(showTitles: false),
+          ),
+          topTitles: AxisTitles(
+            sideTitles: SideTitles(showTitles: false),
+          ),
+          bottomTitles: AxisTitles(
+            sideTitles: SideTitles(
+              showTitles: false,
+            ),
+          ),
+          leftTitles: AxisTitles(
+            sideTitles: SideTitles(
+              showTitles: false,
+            ),
           ),
         ),
-        leftTitles: AxisTitles(
-          sideTitles: SideTitles(
-            showTitles: false,
-          ),
+        borderData: FlBorderData(
+          show: false,
         ),
-      ),
-      borderData: FlBorderData(
-        show: false,
-      ),
-      lineBarsData: [
-        LineChartBarData(
-          spots: const [
-            FlSpot(0, 3),
-            FlSpot(2.6, 2),
-            FlSpot(4.9, 5),
-            FlSpot(6.8, 3.1),
-            FlSpot(8, 4),
-            FlSpot(9.5, 3),
-            FlSpot(11, 4),
-          ],
-          isCurved: true,
-          barWidth: 3,
-          dotData: FlDotData(
-            show: false,
+        lineBarsData: [
+          LineChartBarData(
+            spots: const [
+              FlSpot(0, 3),
+              FlSpot(2.6, 2),
+              FlSpot(4.9, 5),
+              FlSpot(6.8, 3.1),
+              FlSpot(8, 4),
+              FlSpot(9.5, 3),
+              FlSpot(11, 4),
+            ],
+            isCurved: true,
+            barWidth: 3,
+            dotData: FlDotData(
+              show: false,
+            ),
+            belowBarData: BarAreaData(
+              show: false,
+            ),
           ),
-          belowBarData: BarAreaData(
-            show: false,
-          ),
-        ),
-      ],
-    );
+        ],
+      );
 }

@@ -22,5 +22,6 @@ class ThemeCubit extends HydratedCubit<ThemeMode> {
   }
 
   @override
-  Map<String, dynamic>? toJson(ThemeMode state) => <String, String>{'themeMode': state.toString()};
+  Map<String, dynamic>? toJson(ThemeMode state) =>
+      <String, String>{'themeMode': state.toString()};
 }
