@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'config/app_theme.dart';
-import 'features/theme/cubit/theme_cubit.dart';
 import 'features/coins/home.dart';
+import 'features/theme/cubit/theme_cubit.dart';
 
 class CryptoApp extends StatelessWidget {
-  const CryptoApp(
-      {super.key, required CryptoCurrencyRepository cryptoCurrencyRepository})
-      : _cryptoCurrencyRepository = cryptoCurrencyRepository;
+  const CryptoApp({
+    super.key,
+    required CryptoCurrencyRepository cryptoCurrencyRepository,
+  }) : _cryptoCurrencyRepository = cryptoCurrencyRepository;
 
   final CryptoCurrencyRepository _cryptoCurrencyRepository;
 

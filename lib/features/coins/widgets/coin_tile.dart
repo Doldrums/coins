@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../converter/converter.dart';
 import '../../../utils/utils.dart';
+import '../../converter/converter.dart';
 import '../models/models.dart';
 
 class CoinTile extends StatelessWidget {

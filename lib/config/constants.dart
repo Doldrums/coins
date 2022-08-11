@@ -20,6 +20,17 @@ class Constants {
         ),
       ];
 
-  static List<String> detailedCoinsIds() =>
-      ['ethereum', 'bitcoin', 'tether', 'usdc', 'BNB'];
+  static List<String> detailedCoinsIds() => [
+        'ethereum',
+        'bitcoin',
+        'dogecoin',
+        'tether',
+        'xrp',
+        'cardano',
+        'binance-usd',
+        'solana',
+        'tron',
+        'litecoin',
+        'polkadot',
+      ];
 }

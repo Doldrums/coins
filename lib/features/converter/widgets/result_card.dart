@@ -6,9 +6,11 @@ class ResultCard extends StatelessWidget {
   final ValueNotifier<double> amountNotifier;
   final double exchangeRate;
 
-  const ResultCard(
-      {Key? key, required this.amountNotifier, required this.exchangeRate})
-      : super(key: key);
+  const ResultCard({
+    Key? key,
+    required this.amountNotifier,
+    required this.exchangeRate,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) => ValueListenableBuilder<double>(

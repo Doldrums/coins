@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../config/constants.dart';
-import 'bloc/coin_bloc.dart';
-import 'widgets/coin_tile.dart';
 import '../../utils/utils.dart';
 import '../theme/settings.dart';
+import 'bloc/coin_bloc.dart';
 import 'widgets/cards_holder.dart';
+import 'widgets/coin_tile.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);

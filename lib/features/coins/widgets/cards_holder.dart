@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
+import '../../../utils/utils.dart';
 import '../models/models.dart';
 import 'detailed_card.dart';
-import '../../../utils/utils.dart';
 import 'progress_dot.dart';
 
 class CardsHolder extends HookWidget {
@@ -36,8 +36,7 @@ class CardsHolder extends HookWidget {
                 builder: (context, index) => RotatedBox(
                   quarterTurns: 1,
                   child: CurrencyCard(
-                    // TODO:
-                    coin: detailedCoins[index.abs()],
+                    coin: detailedCoins[(index % 10).abs()],
                     selected: selectedIndex.value == index,
                   ),
                 ),
@@ -48,9 +47,9 @@ class CardsHolder extends HookWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(
-            5,
+            detailedCoins.length + 1,
             (index) => ProgressDot(
-              index: index,
+              index: (index % 10).abs(),
               selectedIndex: selectedIndex.value,
             ),
           ),

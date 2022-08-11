@@ -6,9 +6,11 @@ class ExchangeCard extends StatelessWidget {
   final Coin coin;
   final ValueNotifier<double> amountNotifier;
 
-  const ExchangeCard(
-      {Key? key, required this.coin, required this.amountNotifier})
-      : super(key: key);
+  const ExchangeCard({
+    Key? key,
+    required this.coin,
+    required this.amountNotifier,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Column(

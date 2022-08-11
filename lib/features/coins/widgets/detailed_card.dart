@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'detailed_card_chart.dart';
 import '../../../utils/utils.dart';
 import '../models/models.dart';
+import 'detailed_card_chart.dart';
 
 class CurrencyCard extends StatelessWidget {
   final bool selected;

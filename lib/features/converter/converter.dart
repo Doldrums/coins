@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/utils.dart';
 import '../coins/models/coin.dart';
 import 'widgets/exchange_card.dart';
 import 'widgets/result_card.dart';
-import '../../utils/utils.dart';
 
 class Converter extends StatelessWidget {
   final Coin coin;
