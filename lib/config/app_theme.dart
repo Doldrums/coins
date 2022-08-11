@@ -86,6 +86,10 @@ class AppTheme {
       primary: Colors.grey.shade200,
       primaryVariant: Colors.grey.shade300,
       secondary: Colors.grey.shade100,
+      surface: Colors.grey,
+      onSurface: Colors.grey,
+      tertiary: Colors.white,
+      onTertiary: Colors.white,
     ),
   );
 
@@ -109,7 +113,7 @@ class AppTheme {
       /// main screen title
       headline1: GoogleFonts.mulish(
         color: Colors.white,
-        fontSize: 44,
+        fontSize: 38,
         fontWeight: FontWeight.w900,
       ),
 
@@ -167,10 +171,14 @@ class AppTheme {
         fontWeight: FontWeight.w700,
       ),
     ),
-    colorScheme: const ColorScheme.dark(
+    colorScheme: ColorScheme.dark(
       primary: Colors.white12,
       primaryVariant: Colors.white12,
       secondary: Colors.white24,
+      surface: Colors.white,
+      onSurface: Colors.black,
+      tertiary: Colors.transparent,
+      onTertiary: Colors.grey[800],
     ),
   );
 }
