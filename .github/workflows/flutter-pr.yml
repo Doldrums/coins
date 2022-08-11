@@ -48,7 +48,7 @@ jobs:
          java-version: $
      - run: echo "💡 The $ repository has been cloned to the runner."
      - name: Flutter flutter
-       uses: subosito/flutter- @v2
+       uses: subosito/flutter-@v2
        with:
          flutter-version: $
      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
