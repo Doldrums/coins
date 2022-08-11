@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../cubit/theme_cubit.dart';
+import '../models/theme_selector_data.dart';
+import '../models/theme_selector_item.dart';
+import '../utils/notifier.dart';
 import 'theme_selector.dart';
 
 class ThemeSelectorHolder extends StatefulWidget {
@@ -53,11 +56,10 @@ class ThemeSelectorHolderState extends State<ThemeSelectorHolder> {
 
   @override
   Widget build(BuildContext context) => ThemeSelector(
-        navBarEssentials: ThemeSelectorData(
+        themeSelectorData: ThemeSelectorData(
           selectedIndex: _notifier!.index,
           previousIndex: _previousIndex,
           items: widget.items,
-          navBarHeight: 80,
           onItemSelected: (int index) {
             switch (index) {
               case 0:

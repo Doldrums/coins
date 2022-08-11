@@ -40,9 +40,17 @@ class ResultCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text(
-                          Utils.prettyNumber(value * exchangeRate),
-                          style: Theme.of(context).textTheme.headline1,
+                        SizedBox(
+                          width: 120,
+                          height: 40,
+                          child: FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Text(
+                              Utils.prettyNumber(value * exchangeRate),
+                              style: Theme.of(context).textTheme.headline1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                         ),
                         const Spacer(),
                         const SizedBox(

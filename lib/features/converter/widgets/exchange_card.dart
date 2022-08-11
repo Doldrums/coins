@@ -63,14 +63,18 @@ class ExchangeCard extends StatelessWidget {
                         width: 140,
                         height: 60,
                         child: TextFormField(
-                          style: Theme.of(context).textTheme.headline3,
+                          style: Theme.of(context).textTheme.headline4,
                           textAlign: TextAlign.end,
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: '0.0',
                           ),
                           onChanged: (value) {
-                            amountNotifier.value = double.parse(value);
+                            if (value.isEmpty) {
+                              amountNotifier.value = 0.0;
+                            } else {
+                              amountNotifier.value = double.parse(value);
+                            }
                           },
                         ),
                       ),

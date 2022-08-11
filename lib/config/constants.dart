@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../features/theme/widgets/theme_selector.dart';
+import '../features/theme/models/theme_selector_item.dart';
 import '../generated/locale_keys.g.dart';
 
 class Constants {

@@ -10,6 +10,7 @@ import '../config/constants.dart';
 
 part 'fixed_extent_hook.dart';
 part 'bloc_observer.dart';
+
 class Utils {
   const Utils._();
 

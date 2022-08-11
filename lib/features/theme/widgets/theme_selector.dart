@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
+import '../models/theme_selector_data.dart';
+import '../models/theme_selector_item.dart';
+
 class ThemeSelector extends StatelessWidget {
-  final ThemeSelectorData? navBarEssentials;
+  final ThemeSelectorData? themeSelectorData;
 
   const ThemeSelector({
     Key? key,
-    this.navBarEssentials = const ThemeSelectorData(items: null),
+    this.themeSelectorData = const ThemeSelectorData(items: null),
   }) : super(key: key);
 
   Widget _buildItem(
@@ -76,13 +79,13 @@ class ThemeSelector extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: navBarEssentials!.items!.map((item) {
-              var index = navBarEssentials!.items!.indexOf(item);
+            children: themeSelectorData!.items!.map((item) {
+              var index = themeSelectorData!.items!.indexOf(item);
               return GestureDetector(
-                onTap: () => navBarEssentials!.onItemSelected!(index),
+                onTap: () => themeSelectorData!.onItemSelected!(index),
                 child: _buildItem(
                   item,
-                  navBarEssentials!.selectedIndex == index,
+                  themeSelectorData!.selectedIndex == index,
                   context,
                 ),
               );
@@ -90,83 +93,4 @@ class ThemeSelector extends StatelessWidget {
           ),
         ),
       );
-}
-
-class ThemeSelectorData {
-  final int? selectedIndex;
-  final int? previousIndex;
-  final Color? backgroundColor;
-  final List<ThemeSelectorItem>? items;
-  final ValueChanged<int>? onItemSelected;
-  final double? navBarHeight;
-  final bool? popScreensOnTapOfSelectedTab;
-  final BuildContext? selectedScreenBuildContext;
-
-  const ThemeSelectorData({
-    this.selectedIndex,
-    this.previousIndex,
-    this.backgroundColor,
-    this.popScreensOnTapOfSelectedTab,
-    this.navBarHeight = 0.0,
-    required this.items,
-    this.onItemSelected,
-    this.selectedScreenBuildContext,
-  });
-
-  ThemeSelectorData copyWith({
-    int? selectedIndex,
-    int? previousIndex,
-    double? iconSize,
-    Color? backgroundColor,
-    List<ThemeSelectorItem>? items,
-    ValueChanged<int>? onItemSelected,
-    double? navBarHeight,
-    Function(int)? popAllScreensForTheSelectedTab,
-    bool? popScreensOnTapOfSelectedTab,
-  }) =>
-      ThemeSelectorData(
-        selectedIndex: selectedIndex ?? this.selectedIndex,
-        previousIndex: previousIndex ?? this.previousIndex,
-        backgroundColor: backgroundColor ?? this.backgroundColor,
-        items: items ?? this.items,
-        onItemSelected: onItemSelected ?? this.onItemSelected,
-        navBarHeight: navBarHeight ?? this.navBarHeight,
-        popScreensOnTapOfSelectedTab:
-            popScreensOnTapOfSelectedTab ?? this.popScreensOnTapOfSelectedTab,
-      );
-}
-
-class ThemeSelectorItem {
-  final Widget icon;
-  final String? title;
-
-  ThemeSelectorItem({
-    required this.icon,
-    this.title,
-  });
-}
-
-class SelectedThemeNotifier extends ChangeNotifier {
-  SelectedThemeNotifier({int initialIndex = 0})
-      : _index = initialIndex,
-        assert(initialIndex >= 0);
-
-  int get index => _index;
-  int _index;
-
-  set index(int value) {
-    if (_index == value) {
-      return;
-    }
-    _index = value;
-    notifyListeners();
-  }
-
-  jumpToTab(int value) {
-    if (_index == value) {
-      return;
-    }
-    _index = value;
-    notifyListeners();
-  }
 }
