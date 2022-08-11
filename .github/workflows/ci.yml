@@ -29,8 +29,8 @@ on:
         required: true
 
 jobs:
- build:
-   name: flutter build
+ setup:
+   name: 🐧 Setup env!
    runs-on: ubuntu-latest
    env:
       FLUTTER_VERSION: "3.0.5"
@@ -50,6 +50,37 @@ jobs:
        uses: subosito/flutter-action@v2
        with:
          flutter-version: $
+     - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+     - run: flutter pub get
+     - run: flutter analyze
+     - run: flutter test
+ build:
+   name: 🐨 General flutter action!
+   runs-on: ubuntu-latest
+   env:
+      FLUTTER_VERSION: "3.0.5"
+   steps:
+     - name: Setup java
+       uses: actions/setup-java@v1
+       with: 
+         java-version: '17'
+     - run: echo "💡 The $ repository has been cloned to the runner."
+     - name: Flutter flutter
+       uses: subosito/flutter-action@v2
+       with:
+         flutter-version: $
+ test:
+   name: 💡 Test your code on the runner!
+   runs-on: ubuntu-latest
+   env:
+      FLUTTER_VERSION: "3.0.5"
+   steps:
+     - name: Setup java
+       uses: actions/setup-java@v1
+       with: 
+         java-version: '17'
+     - name: Flutter flutter
+       uses: subosito/flutter-action@v2
      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
      - run: flutter pub get
      - run: flutter analyze
