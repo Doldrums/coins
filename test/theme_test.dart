@@ -14,7 +14,7 @@ void main() {
     });
 
     group('toJson/fromJson', () {
-      test('work properly', () {
+      test('works properly', () {
         final themeCubit = ThemeCubit();
         expect(
           themeCubit.fromJson(themeCubit.toJson(themeCubit.state)!),
@@ -28,8 +28,14 @@ void main() {
         'emits correct ThemeMode for Theme switch from default',
         build: ThemeCubit.new,
         act: (cubit) => cubit.updateTheme(ThemeMode.dark),
-        //TODO
-        expect: () => [ThemeMode.light, ThemeMode.dark],
+        expect: () => <ThemeMode>[ThemeMode.dark],
+      );
+
+      blocTest<ThemeCubit, ThemeMode>(
+        'emits correct ThemeMode for Theme switch from default',
+        build: ThemeCubit.new,
+        act: (cubit) => cubit.updateTheme(ThemeMode.light),
+        expect: () => <ThemeMode>[ThemeMode.light],
       );
     });
   });

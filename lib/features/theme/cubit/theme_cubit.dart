@@ -7,11 +7,7 @@ class ThemeCubit extends HydratedCubit<ThemeMode> {
   static const currentTheme = ThemeMode.light;
 
   void updateTheme(ThemeMode theme) {
-    if (theme == ThemeMode.dark) {
-
-      emit(ThemeMode.light);
-    }
-    emit(ThemeMode.dark);
+    emit(theme);
   }
 
   @override
@@ -26,5 +22,5 @@ class ThemeCubit extends HydratedCubit<ThemeMode> {
   }
 
   @override
-  Map<String, dynamic>? toJson(ThemeMode state) => <String, String>{'themeMode': '$state'};
+  Map<String, dynamic>? toJson(ThemeMode state) => <String, String>{'themeMode': state.toString()};
 }
